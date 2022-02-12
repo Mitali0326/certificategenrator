@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Certificate Generator</h1>
+
+  <br>
+
+  <form>
+
+    <input type="text" name="name" class="question" id="name" required autocomplete="off" />
+
+    <label><span>Name</span></label>
+
+    <br><br>
+
+    <input type="text" name="position" class="question" id="position" required autocomplete="off" />
+
+    <label><span>Position</span></label>
+
+    <br><br>
+
+    <input type="text" name="contest" class="question" id="contest" required autocomplete="off" />
+
+    <label><span>Contest</span></label>
+
+    <br><br>
+
+    <input type="text" name="date" class="question" id="date" required autocomplete="off" />
+
+    <label><span>Date</span></label>
+
+    <!-- <input type="submit" value="Submit" /> -->
+  </form>
+
+  <br>
+
+  <div>
+    <canvas id="canvas" height="500px" width="650px"></canvas>
+  </div>
+
+  <br>
+
+  <div>
+    <button><a href="#" id="download-btn">Download as PNG</a></button>
+    <button id="download"> Download as Pdf</button>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
