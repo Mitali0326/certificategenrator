@@ -70,15 +70,7 @@ transform: translateY(0px);
 }
 
 
-#download{
-text-decoration: none;
-color: white;
-font-family: "Poppins", sans-serif;
-font-size: 0.9rem;
-font-weight:bold;
-}
-
-#download-btn {
+#download , #download-btn{
 text-decoration: none;
 color: white;
 font-family: "Poppins", sans-serif;
