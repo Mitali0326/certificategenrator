@@ -171,6 +171,12 @@ input:focus {
     }
   }
 
+  @media only screen and (max-width: 420px) {
+    h1{
+      font-size: 4rem;
+    }
+  }
+
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     form {
