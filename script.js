@@ -9,21 +9,23 @@ const downloadBtn = document.getElementById('download-btn')
 const image = new Image()
 image.src = 'certificate.jpg'
 image.onload = function (){
+    canvas.height = image.height
+    canvas.width = image.width
 	drawImage()
 }
 
 function drawImage() {
-	ctx.drawImage(image, 20, 0, canvas.width, canvas.height)
-	ctx.font = '20px monotype corsiva'
+	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+	ctx.font = '35px monotype corsiva'
 	ctx.fillStyle = 'black'
 
-	ctx.fillText(nameInput.value, 245, 260)
+	ctx.fillText(nameInput.value, 370, 435)
 
-    ctx.fillText(contestInput.value, 305, 310)
+    ctx.fillText(contestInput.value, 440, 510)
 
-	ctx.fillText(positionInput.value, 470, 285)
+	ctx.fillText(positionInput.value, 700, 470)
 
-    ctx.fillText(dateInput.value, 265, 395)
+    ctx.fillText(dateInput.value, 369, 648)
 
 }
 
@@ -56,11 +58,11 @@ window.onload = function () {
             console.log(invoice);
             console.log(window);
             var opt = {
-                margin: 0.5,
+                margin: 0,
                 filename: 'cerficate.pdf',
                 image: { type: 'jpeg', quality: 1 },
                 html2canvas: { scale: 1 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
             };
             html2pdf().from(invoice).set(opt).save();
         })
