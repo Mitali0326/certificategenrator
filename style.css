@@ -161,13 +161,9 @@ input:focus {
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (max-width: 300px) {
+  @media only screen and (min-width: 300px) {
     form {
       padding: 5%;
-    }
-
-    .certificate {
-      display: block;
     }
   }
 
@@ -189,9 +185,12 @@ input:focus {
   }
 
   /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 920px) {
     form {
       padding: 4%;
+    }
+    .certificate {
+      display: block;
     }
   }
 
