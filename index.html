@@ -12,10 +12,14 @@
 
 <body>
   <h1>Certificate Generator</h1>
-
 <br>
+
 <div class="certificate">
   <form>
+
+    <input type="range" id="value" min="370" max="720" value="0" onchange="increase()">
+
+    <br>
 
     <input type="text" name="name" class="question" id="name" required autocomplete="off" />
 
