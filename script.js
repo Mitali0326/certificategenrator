@@ -33,8 +33,9 @@ function increase() {
     // var name = document.getElementById("name");
     // nameInput.style.marginLeft = value + 'px';
     ctx.clearStyle = "white";
-    ctx.clearRect(370, 400, 850, 35);
-    ctx.fillText(nameInput.value, [value], 425);
+    ctx.clearRect(370, 385, 850, 50);
+    ctx.font = "50px monotype corsiva"
+    ctx.fillText(nameInput.value, [value], 420);
 }
 
     nameInput.addEventListener('input', function () {
