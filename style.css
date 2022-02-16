@@ -103,7 +103,7 @@ input:focus {
     padding: 0;
     margin: 0;
     width: 80%;
-    border-top: 1px solid #001233;
+    /* border-top: 1px solid #001233; */
     -webkit-transition: width 0.4s ease;
     transition: width 0.4s ease;
     height: 0px;
@@ -200,3 +200,41 @@ input:focus {
       padding: 3%;
     }
   }
+
+  
+  /* drag and drop 1 */
+  aside { 
+    position:  absolute;
+    left: 0;
+    top: 0; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+    width: 200px; 
+    background: rgba(255,255,255,0.66); 
+   
+}
+ #dragme{
+   font-size: 50px;
+   font-style: monotype corsiva;
+}
+
+
+
+/* drag and drop 2 */
+/* h2 { 
+  position:  absolute;
+  left: 50px;
+  top: 100px;
+}
+.dragme {
+  cursor: move;
+} */
+
+
+
+
+/* drag and drop 3 */
+  /* body{ background-color: ivory; }
+  #canvas{border:1px solid red;}
+  #theText{width:10em;} */
+
+
+
