@@ -66,10 +66,10 @@
 
  
   <!-- drag and drop 1 -->
-  <aside draggable="true" id="dragme">
+  <!-- <aside draggable="true" id="dragme">
     <input type="text" name="name" class="question" id="name" required autocomplete="off" />
 
-    <label><span>Name</span></label>
+    <label><span>Name</span></label> -->
 
    
 <!--      
@@ -120,6 +120,16 @@
     <canvas id="canvas" width=300 height=300></canvas> -->
 
 
+    <!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+ -->
+
+
+ <aside draggable="true" class="dragme" data-item="0"><input type="text" name="name" class="question" id="name" required autocomplete="off" /></aside>
+<aside draggable="true" class="dragme second" data-item="1"><input type="text" name="position" class="question" id="position" required autocomplete="off" /></aside>
+<aside draggable="true" class="dragme third" data-item="2"> <input type="text" name="contest" class="question" id="contest" required autocomplete="off" /></aside>
+<aside draggable="true" class="dragme forth" data-item="3"><input type="text" name="date" class="question" id="date" required autocomplete="off" /></aside>
 
 </body>
 <script src="script.js"></script>

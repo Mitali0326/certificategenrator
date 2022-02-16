@@ -49,9 +49,9 @@ color: #001a4d;
 input,label {
 font-family: "Ubuntu", sans-serif;
 display: block;
-padding: 5px;
+/* padding: 5px; */
 border: none;
-font-size: 20px;
+font-size: 5px;
 color: #001a4d;
 }
 
@@ -203,10 +203,10 @@ input:focus {
 
   
   /* drag and drop 1 */
-  aside { 
+  /* aside { 
     position:  absolute;
     left: 0;
-    top: 0; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+    top: 0;
     width: 200px; 
     background: rgba(255,255,255,0.66); 
    
@@ -214,7 +214,7 @@ input:focus {
  #dragme{
    font-size: 50px;
    font-style: monotype corsiva;
-}
+} */
 
 
 
@@ -238,3 +238,30 @@ input:focus {
 
 
 
+aside {
+  position: absolute;
+  left: 100px;
+  top: 377px;
+  width: 200px;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 4px;
+  /* padding: 8px; */
+}
+
+.second {
+	left: 100px;
+	top: 437px;
+}
+.third {
+	left: 100px;
+	top: 498px;
+}
+.forth {
+	left: 100px;
+	top: 562px;
+}
+
+/* body, html {
+	min-height: 100vh;
+} */
