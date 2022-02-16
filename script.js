@@ -7,7 +7,7 @@ const dateInput = document.getElementById('date')
 const downloadBtn = document.getElementById('download-btn')
 
 const image = new Image()
-image.src = 'certificate.jpg'
+// image.src = 'certificate.jpg'
 image.onload = function () {
     canvas.height = image.height
     canvas.width = image.width
