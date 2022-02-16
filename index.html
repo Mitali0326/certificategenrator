@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certificate Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Kaiido/createImageBitmap/dist/createImageBitmap.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -16,6 +17,10 @@
 
 <div class="certificate">
   <form>
+
+    <input type="file">
+
+    <br>
 
     <input type="range" id="value" min="370" max="630" value="0" onchange="increase()">
 
