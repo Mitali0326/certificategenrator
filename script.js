@@ -6,22 +6,22 @@ const positionInput = document.getElementById('position')
 const dateInput = document.getElementById('date')
 const downloadBtn = document.getElementById('download-btn')
 
-const image = new Image()
-// image.src = 'certificate.jpg'
-image.onload = function () {
-    canvas.height = image.height
-    canvas.width = image.width
-    drawImage()
-}
+var image = new Image()
+image.src = 'certificate.jpg'
+// image.onload = function () {
+//     canvas.height = image.height
+//     canvas.width = image.width
+//     drawImage()
+// }
 
 document.querySelector("input").oninput = async (evt) => {
     try {
-      const file = evt.target.files[0];
-      const bitmap = await createImageBitmap(file);
-      const canvas = document.querySelector("canvas");
+      var file = evt.target.files[0];
+      var bitmap = await createImageBitmap(file);
+      var canvas = document.querySelector("canvas");
       canvas.width = bitmap.width;
       canvas.height = bitmap.height;
-      const ctx = canvas.getContext("2d");
+      var ctx = canvas.getContext("2d");
       ctx.drawImage(bitmap, 0, 0);
     }
     catch(err) {
@@ -29,12 +29,20 @@ document.querySelector("input").oninput = async (evt) => {
     }
   };
 
+var cx = document.getElementById('xpos');
+var cy = document.getElementById('ypos');
+
+cx.addEventListener('change', drawImage, true);
+cy.addEventListener('change', drawImage, true);
+
 function drawImage() {
     ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
     ctx.font = '35px monotype corsiva'
     ctx.fillStyle = 'black'
 
-    ctx.fillText(nameInput.value, 370, 425)
+    ctx.fillText(nameInput.value, cx.value, cy.value);
+    console.log("X range, X axis: " + cx.value);
+    console.log("X range, Y axis: " + cy.value);
 
     ctx.fillText(contestInput.value, 440, 510)
 
@@ -43,15 +51,15 @@ function drawImage() {
     ctx.fillText(dateInput.value, 369, 648)
 }
 
-function increase() {
-    var value = document.getElementById("value").value;
+// function increase() {
+    // var value = document.getElementById("value").value;
     // var name = document.getElementById("name");
     // nameInput.style.marginLeft = value + 'px';
-    ctx.clearStyle = "white";
-    ctx.clearRect(370, 385, 850, 50);
-    ctx.font = "50px monotype corsiva"
-    ctx.fillText(nameInput.value, [value], 420);
-}
+//     ctx.clearStyle = "white";
+//     ctx.clearRect(370, 385, 850, 50);
+//     ctx.font = "50px monotype corsiva"
+//     ctx.fillText(nameInput.value, [value], 420);
+// }
 
     nameInput.addEventListener('input', function () {
         drawImage()
