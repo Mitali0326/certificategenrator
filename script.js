@@ -8,7 +8,7 @@ const downloadBtn = document.getElementById('download-btn')
 
 const image = new Image()
 image.src = 'certificate.jpg'
-image.onload = function () {
+image.onload = function() {
     canvas.height = image.height
     canvas.width = image.width
     drawImage()
@@ -38,80 +38,80 @@ function increase() {
     ctx.fillText(nameInput.value, [value], 420);
 }
 
-    nameInput.addEventListener('input', function () {
-        drawImage()
-    })
+// nameInput.addEventListener('input', function () {
+//     drawImage()
+// })
 
-    contestInput.addEventListener('input', function () {
-        drawImage()
-    })
+// contestInput.addEventListener('input', function () {
+//     drawImage()
+// })
 
-    positionInput.addEventListener('input', function () {
-        drawImage()
-    })
+// positionInput.addEventListener('input', function () {
+//     drawImage()
+// })
 
-    dateInput.addEventListener('input', function () {
-        drawImage()
-    })
+// dateInput.addEventListener('input', function () {
+//     drawImage()
+// })
 
-    downloadBtn.addEventListener('click', function () {
-        downloadBtn.href = canvas.toDataURL('image/jpg')
-        downloadBtn.download = 'Certificate - ' + nameInput.value
-    })
+downloadBtn.addEventListener('click', function() {
+    downloadBtn.href = canvas.toDataURL('image/jpg')
+    downloadBtn.download = 'Certificate - ' + nameInput.value
+})
 
-    window.onload = function () {
-        document.getElementById("download")
-            .addEventListener("click", () => {
-                const invoice = this.document.getElementById("canvas");
-                console.log(invoice);
-                console.log(window);
-                var opt = {
-                    margin: 0,
-                    filename: 'cerficate.pdf',
-                    image: {
-                        type: 'jpeg',
-                        quality: 1
-                    },
-                    html2canvas: {
-                        scale: 1
-                    },
-                    jsPDF: {
-                        unit: 'in',
-                        format: 'a4',
-                        orientation: 'landscape'
-                    }
-                };
-                html2pdf().from(invoice).set(opt).save();
-            })
-    }
-
-
-    //   DRAG AND DROP 1
-    // function drag_start(event) {
-    //     var style = window.getComputedStyle(event.target, null);
-    //     event.dataTransfer.setData("text",
-    //     (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
-    // } 
-    // function drag_over(event) { 
-    //     event.preventDefault(); 
-    //     return false; 
-    // } 
-    // function drop(event) { 
-    //     var offset = event.dataTransfer.getData("text").split(','); 
-    //     var dm = document.getElementById('dragme');
-    //     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
-    //     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
-    //     ctx.font = "50px monotype corsiva"
-    //     event.preventDefault();
-    //     return false;
-    // } 
-    // var dm = document.getElementById('dragme'); 
-    // dm.addEventListener('dragstart',drag_start,false); 
-    // document.body.addEventListener('dragover',drag_over,false); 
-    // document.body.addEventListener('drop',drop,false); 
+window.onload = function() {
+    document.getElementById("download")
+        .addEventListener("click", () => {
+            const invoice = this.document.getElementById("canvas");
+            console.log(invoice);
+            console.log(window);
+            var opt = {
+                margin: 0,
+                filename: 'cerficate.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 1
+                },
+                html2canvas: {
+                    scale: 1
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'a4',
+                    orientation: 'landscape'
+                }
+            };
+            html2pdf().from(invoice).set(opt).save();
+        })
+}
 
 
-   
+//   DRAG AND DROP 1
+// function drag_start(event) {
+//     var style = window.getComputedStyle(event.target, null);
+//     event.dataTransfer.setData("text",
+//     (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+// } 
+// function drag_over(event) { 
+//     event.preventDefault(); 
+//     return false; 
+// } 
+// function drop(event) { 
+//     var offset = event.dataTransfer.getData("text").split(','); 
+//     var dm = document.getElementById('dragme');
+//     dm.style.left = (event.clientX + parseInt(offset[0],10)) + 'px';
+//     dm.style.top = (event.clientY + parseInt(offset[1],10)) + 'px';
+//     ctx.font = "50px monotype corsiva"
+//     event.preventDefault();
+//     return false;
+// } 
+// var dm = document.getElementById('dragme'); 
+// dm.addEventListener('dragstart',drag_start,false); 
+// document.body.addEventListener('dragover',drag_over,false); 
+// document.body.addEventListener('drop',drop,false); 
+
+
+
 
 
 // DRAG AND DROP 2    
@@ -124,16 +124,16 @@ function increase() {
 
 
 // DRAG AND DROP 3
- // end $(function(){});
+// end $(function(){});
 
 //  function allowDrop(ev) {
 //     ev.preventDefault();
 //   }
-  
+
 //   function drag(ev) {
 //     ev.dataTransfer.setData("text", ev.target.id);
 //   }
-  
+
 //   function drop(ev) {
 //     ev.preventDefault();
 //     var data = ev.dataTransfer.getData("text");
@@ -142,27 +142,28 @@ function increase() {
 
 
 function drag_start(event) {
-	var style = window.getComputedStyle(event.target, null);
-	event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.getAttribute('data-item'));
+    var style = window.getComputedStyle(event.target, null);
+    event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.getAttribute('data-item'));
+    ctx.fillText(text, 200, 300);
 }
 
 function drag_over(event) {
-	event.preventDefault();
-	return false;
+    event.preventDefault();
+    return false;
 }
 
 function drop(event) {
-	var offset = event.dataTransfer.getData("text/plain").split(',');
-	var dm = document.getElementsByClassName('dragme');
-	dm[parseInt(offset[2])].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
-	dm[parseInt(offset[2])].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
-	event.preventDefault();
-	return false;
+    var offset = event.dataTransfer.getData("text/plain").split(',');
+    var dm = document.getElementsByClassName('dragme');
+    dm[parseInt(offset[2])].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
+    dm[parseInt(offset[2])].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+    event.preventDefault();
+    return false;
 }
 
 var dm = document.getElementsByClassName('dragme');
 for (var i = 0; i < dm.length; i++) {
-	dm[i].addEventListener('dragstart', drag_start, false);
-	document.body.addEventListener('dragover', drag_over, false);
-	document.body.addEventListener('drop', drop, false);
+    dm[i].addEventListener('dragstart', drag_start, false);
+    document.body.addEventListener('dragover', drag_over, false);
+    document.body.addEventListener('drop', drop, false);
 }

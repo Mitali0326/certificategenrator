@@ -1,138 +1,149 @@
 @import url('https://fonts.cdnfonts.com/css/cream-candy');
 
 /* html { */
+
+
 /* font-family: "Lora", sans-serif; */
+
+
 /* width: 100%;
 } */
 
 body {
-margin: 2%;
-/* background-image: linear-gradient(#e7fae4, #e7d0da); */
-border: 4px solid #333;
-padding: 3%;
-border-radius: 10px;
+    margin: 2%;
+    background-image: linear-gradient(#e7fae4, #e7d0da);
+    border: 4px solid #333;
+    padding: 3%;
+    border-radius: 10px;
 }
 
 h1 {
-font-size: 9rem;
-margin-bottom: 2.5%;
-text-align: center;
-font-family: 'Cream Candy', sans-serif;
-color: #001a4d;
-margin-top: 1.5%;
-
+    font-size: 9rem;
+    margin-bottom: 2.5%;
+    text-align: center;
+    font-family: 'Cream Candy', sans-serif;
+    color: #001a4d;
+    margin-top: 1.5%;
 }
 
 canvas {
-height: auto;
-width: 90%;
+    height: auto;
+    width: 90%;
 }
 
 form {
-height: auto;
-/* margin-left: 20%;
-margin-right: 20%; */
+    height: auto;
 }
 
 div {
-display: center;
-text-align: center;
+    text-align: center;
 }
-span{
-font-family: 'times new roman', sans-serif;
-display: block;
-padding: 5px;
-border: none;
-font-size: 20px;
-color: #001a4d;
+
+span {
+    font-family: 'times new roman', sans-serif;
+    display: block;
+    padding: 5px;
+    border: none;
+    font-size: 2rem;
+    color: #001a4d;
 }
-input,label {
-font-family: "Ubuntu", sans-serif;
-display: block;
-/* padding: 5px; */
-border: none;
-font-size: 5px;
-color: #001a4d;
+
+input,
+label {
+    font-family: 'times new roman', sans-serif;
+    display: block;
+    /* padding: 5px; */
+    border: none;
+    font-size: 4rem;
+    color: #001a4d;
 }
 
 button {
-padding: 1%;
-border-radius: 10px;
-text-decoration: none;
-background-color:  #001233;
+    padding: 1%;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #001233;
 }
+
 .button:hover {
-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .button:active {
-transform: translateY(0px);
+    transform: translateY(0px);
 }
 
-
-#download , #download-btn{
-text-decoration: none;
-color: white;
-font-family: "Poppins", sans-serif;
-font-size: 0.9rem;
-font-weight:bold;
+#download,
+#download-btn {
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 input:focus {
     outline: 0;
-  }
+}
 
-  /* Question */
-  input.question {
-    font-size: 20px;
+
+/* Question */
+
+input.question {
+    font-size: 1.5rem;
     font-weight: 300;
-    border-radius: 2px;
     margin: 0;
     border: none;
     width: 100%;
     background: rgba(0, 0, 0, 0);
-    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    /* transition: padding-top 0.2s ease, margin-top 0.2s ease; */
     overflow-x: hidden;
-  }
+}
 
-  /* Underline and Placeholder */
-  input.question + label {
+
+/* Underline and Placeholder */
+
+input.question+label {
     display: block;
     position: relative;
     white-space: nowrap;
     padding: 0;
     margin: 0;
     width: 80%;
-    /* border-top: 1px solid #001233; */
-    -webkit-transition: width 0.4s ease;
-    transition: width 0.4s ease;
     height: 0px;
-  }
+}
 
-  input.question:focus + label {
+input.question:focus+label {
     width: 100%;
-  }
+}
 
-  input.question:focus{
+input.question:focus {
     padding-top: 5px;
-  }
+}
 
-  input.question:focus + label > span,
-  input.question:valid + label > span {
+input.question:focus+label>span,
+input.question:valid+label>span {
     top: -65px;
     font-size: 22px;
     color: #333;
-  }
+}
 
-  input.question:valid + label {
+input.question:valid+label {
     border-color: green;
-  }
+}
 
-  input.question:invalid {
+input.question:invalid {
     box-shadow: none;
-  }
+}
 
-  input.question + label > span {
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: transparent !important;
+    color: -internal-light-dark(black, white) !important;
+}
+
+input.question+label>span {
     font-weight: 300;
     position: absolute;
     color: #8f8f8f;
@@ -142,68 +153,77 @@ input:focus {
     z-index: -1;
     -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
     transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
-  }
+}
 
-  @-webkit-keyframes appear {
+@-webkit-keyframes appear {
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  @keyframes appear {
+@keyframes appear {
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  .certificate {
+.certificate {
     display: flex;
-  }
+}
 
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 300px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 300px) {
     form {
-      padding: 5%;
+        padding: 5%;
     }
-  }
+}
 
-  @media only screen and (max-width: 420px) {
-    h1{
-      font-size: 4rem;
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 4rem;
     }
-  }
+}
 
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (max-width: 768px) {
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
     form {
-      padding: 6%;
-    }
-
-    .certificate {
-      display: block;
-    }
-  }
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (max-width: 920px) {
-    form {
-      padding: 4%;
+        padding: 6%;
     }
     .certificate {
-      display: block;
+        display: block;
     }
-  }
+}
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (max-width: 920px) {
     form {
-      padding: 3%;
+        padding: 4%;
     }
-  }
+    .certificate {
+        display: block;
+    }
+}
 
-  
-  /* drag and drop 1 */
-  /* aside { 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    form {
+        padding: 3%;
+    }
+}
+
+
+/* drag and drop 1 */
+
+
+/* aside { 
     position:  absolute;
     left: 0;
     top: 0;
@@ -217,8 +237,9 @@ input:focus {
 } */
 
 
-
 /* drag and drop 2 */
+
+
 /* h2 { 
   position:  absolute;
   left: 50px;
@@ -229,38 +250,36 @@ input:focus {
 } */
 
 
-
-
 /* drag and drop 3 */
-  /* body{ background-color: ivory; }
+
+
+/* body{ background-color: ivory; }
   #canvas{border:1px solid red;}
   #theText{width:10em;} */
 
-
-
 aside {
-  position: absolute;
-  left: 100px;
-  top: 377px;
-  width: 200px;
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(0, 0, 0, 1);
-  border-radius: 4px;
-  /* padding: 8px; */
+    position: absolute;
+    left: 6.5rem;
+    top: 24.5rem;
+    width: 25rem;
+    padding: 8px;
 }
 
 .second {
-	left: 100px;
-	top: 437px;
+    left: 6.5rem;
+    top: 31.5rem;
 }
+
 .third {
-	left: 100px;
-	top: 498px;
+    left: 6.5rem;
+    top: 39rem;
 }
+
 .forth {
-	left: 100px;
-	top: 562px;
+    left: 6.5rem;
+    top: 46.5rem;
 }
+
 
 /* body, html {
 	min-height: 100vh;
